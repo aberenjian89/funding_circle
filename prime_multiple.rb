@@ -40,12 +40,15 @@ def print_pretty(result)
   puts 
 end
 
-
-puts "Put n:"
-number = gets.to_i
-if number != 0 && number!= "/n"
-  result =  prime_multi(number.to_i)
-else
-  result = prime_multi
+number = 0
+loop do 
+  puts "Please Enter number:"
+  number = gets.to_i
+  if number != 0 && number != "/n"
+    result = prime_multi(number)
+    print_pretty(result)
+    break
+  else 
+    puts "please Enter valid number"
+  end
 end
-print_pretty(result)
